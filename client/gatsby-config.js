@@ -1,8 +1,13 @@
+// configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
+
+// -- //
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    // title: `Gatsby Default Starter`,
+    title: `NoteCards`,
+    description: `Description`,
+    author: `Reed Turgeon`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

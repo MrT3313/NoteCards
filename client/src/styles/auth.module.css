@@ -1,0 +1,74 @@
+
+.AuthPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.authBox {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    border: 3px solid yellow;
+}
+
+.authTabs {
+    display: flex;
+}
+
+.authTab {
+    display: flex;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    width: 50%;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.authContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border: 1px dashed black;
+}
+
+.authSignIn {
+    background: grey;
+}
+.authSignUp {
+    background: blue;
+}
+
+.authSubbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 1.5rem;
+
+    height: 60px;
+
+    /* border: 1px dashed black; */
+}
+
+.authButton {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+

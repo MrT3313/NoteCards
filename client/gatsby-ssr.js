@@ -1,3 +1,7 @@
+// use Gatsby’s server-side rendering APIs to customize default settings affecting server-side rendering
+
+// -- //
+
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
  *
