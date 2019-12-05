@@ -1,7 +1,10 @@
 // configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
 
 // -- //
+require('dotenv').config()
 
+console.log(process.env.CONTENTFUL_SPACE_ID)
+console.log(process.env.CONTENTFUL_ACCESS_TOKEN)
 module.exports = {
   siteMetadata: {
     // title: `Gatsby Default Starter`,
@@ -29,6 +32,15 @@ module.exports = {
     // Images
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
 
 
     `gatsby-plugin-react-helmet`,
