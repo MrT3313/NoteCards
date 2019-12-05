@@ -2,7 +2,8 @@
 import React from 'react'
 
 // COMPONENTS
-import ClientLogo from '../components/ClientLogo.js'
+
+
 // CSS
 import MainLayout_STYLES from'../styles/mainLayout.module.css'
 
