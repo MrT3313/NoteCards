@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     // title: `Gatsby Default Starter`,
     title: `NoteCards`,
+    subTitle: `The Proving Ground`,
     description: `Description`,
     author: `Reed Turgeon`,
   },

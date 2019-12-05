@@ -1,6 +1,6 @@
 // IMPORTS
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 // COMPONENTS
 
@@ -13,7 +13,18 @@ import LandingPage_STYLES from '../styles/LandingPage.module.css'
 
 
 // MAIN COMPONENT TO EXPORT
-const LandingPage = () => (
+const LandingPage = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    subTitle
+                }
+            }
+        }
+    `)
+
+    return (
         <div
             // id="LandingPage"
             className={LandingPage_STYLES.LandingPage_CONTAINER}
@@ -21,14 +32,16 @@ const LandingPage = () => (
             <div
                 className={LandingPage_STYLES.client_LOGO}
             ></div>
-            <h3>The Proving Ground</h3>
+            <h3>{data.site.siteMetadata.subTitle}</h3>
 
             <h2>Pick Location</h2>
 
             {/* <button>Sign In / Sign Up</button> */}
             <Link to="/AuthPage/">Sign In / Sign Up</Link>
         </div>
-)
+        
+    )
+}
 
 // EXPORTS
 export default LandingPage
