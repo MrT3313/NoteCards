@@ -1,0 +1,9 @@
+.index {
+    display: flex;
+    border: 1px solid orange;
+}
+
+.children {
+    display: flex;
+    flex-direction: row;
+}
