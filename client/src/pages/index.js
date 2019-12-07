@@ -1,3 +1,5 @@
+// INITIAL COMMIT TO AUTH BRANCH
+
 // IMPORTS
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
