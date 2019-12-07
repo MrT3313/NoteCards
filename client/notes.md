@@ -1,8 +1,3 @@
-Current: 
-TODO: 
-1. Plugin: SCSS
-2. Markdown Data
 
-
-Future:
-A. CMS Data
+useStaticQuery / StaticQuery 
+- lets you query for data inside of a perticular component instead of passing it around via props

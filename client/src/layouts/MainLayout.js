@@ -11,9 +11,7 @@ import MainLayout_STYLES from'../styles/mainLayout.module.css'
 const MainLayout = (props) => {
     return (
         <div className={MainLayout_STYLES.index}>
-            <div className={MainLayout_STYLES.children}>
-                {props.children}
-            </div>
+            {props.children}
         </div>
     )
 }
