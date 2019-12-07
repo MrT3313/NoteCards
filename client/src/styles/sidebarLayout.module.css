@@ -1,6 +1,81 @@
 .index{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     border: 1px solid teal;
+}
+
+.clientLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 100%;
+
+    border: 1px dashed red;
+}
+
+/* HOME SIDEBAR */
+.homeSidebar,
+.welcome div {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;;
+    flex-direction: column;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0px;
+    list-style-type:none
+}
+
+.menu li {
+    display: flex;
+    margin-bottom: 10px;
+}
+.menu li:last-child {
+    margin-bottom: 0px;
+}
+
+/* STUDY SIDEBAR */
+.studySidebar {
+    display: flex;
+    flex-direction: column;
+}
+.sidebarContent {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+.sidebarContent div {
+    margin-bottom: 5px;
+}
+.sidebarContent div:last-child {
+    margin-bottom: 0px;
 }

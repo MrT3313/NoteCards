@@ -51,8 +51,6 @@ const LandingPage = () => {
 
             <div>FOR DEV: </div> 
             <Link to="/HomePage/">Home Page</Link>
-            <Link to="/StudyPage/">Study Page</Link>
-            <Link to="/TestPage/">Test Page</Link>
         </div>
         
     )

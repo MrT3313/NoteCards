@@ -6,7 +6,9 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import MainLayout from '../layouts/MainLayout.js'
 
 // COMPONENTS
-import HomeSidebar from '../components/HomeSidebar.js'
+import Sidebar from '../layouts/SidebarLayout.js'
+
+
 import StudySetOption from '../components/StudySetOption.js'
 
 // CSS
@@ -20,7 +22,8 @@ const HomePage = () => {
 
     return (
         <MainLayout>
-            <HomeSidebar />
+            {/* <HomeSidebar /> */}
+            <Sidebar type="Home"/> 
                 <div className={HomePage_STYLES.index}>
                     {data.allContentfulCard.edges.map((element, key) => {
                         return element.node.studySets.map((item, key) => {

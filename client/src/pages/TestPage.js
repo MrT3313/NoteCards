@@ -5,7 +5,7 @@ import React from 'react'
 import MainLayout from '../layouts/MainLayout.js'
 
 // COMPONENTS
-import TestSidebar from '../components/TestSidebar.js'
+import Sidebar from '../layouts/SidebarLayout.js'
 
 // CSS 
 
@@ -13,7 +13,8 @@ import TestSidebar from '../components/TestSidebar.js'
 const TestPage = () => {
     return (
         <MainLayout>
-            <TestSidebar /> 
+            {/* <TestSidebar />  */}
+            <Sidebar type='Test'/>
             <div>Test Page</div>
         </MainLayout>
     )
