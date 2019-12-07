@@ -20,7 +20,7 @@ const SidebarLayout = (props) => {
             {/* V2 */}
             {props.type === 'Home' && 
                 <div className={SidebarLayout_STYLES.homeSidebar}>
-                    <div className={SidebarLayout_STYLES.welcome}>
+                    <div className={SidebarLayout_STYLES.sidebarContent}>
                         <div>Welcome</div>
                         <div>ADD USERNAME</div>
                     </div>
