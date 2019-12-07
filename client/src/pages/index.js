@@ -49,7 +49,8 @@ const LandingPage = () => {
             <h2>Pick Location</h2>
 
             {/* <button>Sign In / Sign Up</button> */}
-            <Link to="/AuthPage/">Sign In / Sign Up</Link>
+            {/* <Link to="/AuthPage/">Sign In / Sign Up</Link> */}
+            <Link to="/app/HomePage/">Sign In / Sign Up</Link>
 
             <div>FOR DEV: </div> 
             <Link to="/HomePage/">Home Page</Link>
