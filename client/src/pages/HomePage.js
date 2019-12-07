@@ -19,17 +19,25 @@ import HomePage_STYLES from '../styles/homePage.module.css'
 // - V1 - // Functional Components (what is comes with)
 const HomePage = () => {
     const data = useStaticQuery(query)
+    const uniqueArray = []
 
     return (
         <MainLayout>
             {/* <HomeSidebar /> */}
             <Sidebar type="Home"/> 
                 <div className={HomePage_STYLES.index}>
-                    {data.allContentfulCard.edges.map((element, key) => {
-                        return element.node.studySets.map((item, key) => {
-                            return <StudySetOption item={item}/>
-                        })
-                        
+                    {/* Make Unique Array */}
+                    {data.allContentfulCard.edges.forEach((element, key) => {
+                        element.node.studySets.forEach((item, key) => {
+                            if(!uniqueArray.includes(item)) {
+                                uniqueArray.push(item)
+                            }
+                        })    
+                    })}
+                    {/* {console.log(uniqueArray)} */}
+                    {/* Map over and render individual studySets  */}
+                    {uniqueArray.map((set, key) => {
+                        return <StudySetOption item={set}/>
                     })}
                 </div>
         </MainLayout>

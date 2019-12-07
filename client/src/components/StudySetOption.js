@@ -18,7 +18,15 @@ const StudySetOption = (props) => {
     console.log('StudySetOption Props', props)
     return (
         <div className={StudySetOption_STYLES.index}>
-            {props.item}
+            <div className={StudySetOption_STYLES.box_1}>
+                {props.item}
+            </div>
+            <div className={StudySetOption_STYLES.box_2}>
+                2
+            </div>
+            <div className={StudySetOption_STYLES.box_3}>
+                3
+            </div>
         </div>
     )
 }
