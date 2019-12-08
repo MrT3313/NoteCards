@@ -1,63 +1,33 @@
-// INITIAL COMMIT TO AUTH BRANCH
+// src/index.js
 
-// IMPORTS
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "../app";
+import * as serviceWorker from "./serviceWorker";
+import { Auth0Provider } from "../react-auth0-spa";
+import config from "../auth_config.json";
+import history from "../utils/history.js";
 
-// COMPONENTS
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
+// A function that routes the user to the right place
+// after login
+const onRedirectCallback = appState => {
+    history.push(
+        appState && appState.targetUrl
+        ? appState.targetUrl
+        : window.location.pathname
+    );
+};
 
-// CSS
-import LandingPage_STYLES from '../styles/LandingPage.module.css'
+ReactDOM.render(
+  <Auth0Provider
+    domain={config.domain}
+    client_id={config.clientId}
+    redirect_uri={window.location.origin}
+    onRedirectCallback={onRedirectCallback}
+  >
+    <App />
+  </Auth0Provider>,
+  document.getElementById("root")
+);
 
-
-// MAIN COMPONENT TO EXPORT
-const LandingPage = () => {
-
-    // -1- // Get Company info from Contentful
-    const data = useStaticQuery(graphql`
-        query {
-            contentfulCompanyInfo {
-                companyName
-                appSubTitle
-            },
-            allContentfulCard {
-                edges {
-                    node {
-                        studySets
-                    }
-                }
-            },
-        }
-    `)
-    console.log(data)
-
-    // -2- // Prepare JSX to be rendered
-    return (
-        <div
-            // id="LandingPage"
-            className={LandingPage_STYLES.LandingPage_CONTAINER}
-        >
-            <div
-                className={LandingPage_STYLES.client_LOGO}
-            ></div>
-            <h3>
-                {data.contentfulCompanyInfo.appSubTitle}
-            </h3>
-
-            <h2>Pick Location</h2>
-
-            {/* <button>Sign In / Sign Up</button> */}
-            {/* <Link to="/AuthPage/">Sign In / Sign Up</Link> */}
-            <Link to="/app/HomePage/">Sign In / Sign Up</Link>
-
-            <div>FOR DEV: </div> 
-            <Link to="/HomePage/">Home Page</Link>
-        </div>
-        
-    )
-}
-
-// EXPORTS
-export default LandingPage
+serviceWorker.unregister();
