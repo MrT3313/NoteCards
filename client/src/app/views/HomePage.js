@@ -3,7 +3,7 @@ import React from "react";
 import { useAuth0 } from "../../react-auth0-spa.js";
 
 // COMPONENTS
-// import Auth0_buttons from '../components/Auth0_buttons.js'
+import Auth0_buttons from '../components/Auth0_buttons.js'
 
 // CSS
 // TODO: MOVE THIS TO CSS MODULE
@@ -29,7 +29,8 @@ const HomePage = () => {
                 {/* <NavBar /> */}
                 <div>This is the APP HOMEPAGE</div>
                 <div>src > APP > VIEWS > HomePage</div>
-                {/* <Auth0_buttons /> */}
+                <Auth0_buttons /> 
+            
             {/* </header> */}
         </div>
     );
