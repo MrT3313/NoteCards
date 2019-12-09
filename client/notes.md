@@ -27,13 +27,16 @@ https://manage.auth0.com/dashboard/us/note-cards/applications/yMGJXAwzvUGpsqOxtm
 
 New Attempt
 
-# Auth0
+# Steps
+
+## Auth0 - Docs: 
 - Following: Quick Start for React SPA
 - URL: https://auth0.com/docs/quickstart/spa/react
 --- 
 
-- Application: manage.auth0.com/dashboard/us/note-cards/applications/yMGJXAwzvUGpsqOxtmvz00WOrN3njeYg
-
+## Auth0 - Application:
+- URL: manage.auth0.com/dashboard/us/note-cards/applications/yMGJXAwzvUGpsqOxtmvz00WOrN3njeYg
+---
     - Domain: [x]
     - ClientID: [x]
     - Allowed Callback URL's: http://localhost:8000/callback
@@ -41,10 +44,26 @@ New Attempt
     - Allowed Logout URLs: http://localhost:8000
     - Allowed Origins (CORS): http://localhost:8000
 
+##  Gatsby - Sample Application
+- [Auth Branch Commit History: Basic Rendering w/ 'src > pages' & 'src > app' setup](https://github.com/MrT3313/NoteCards/tree/b33afff52e1581286563300ed59dc5fc63868735/client)
 
+## Auth0 - Dependencies
+- react-router-dom
+- @auth0/auth0-spa-js
 
+## Auth0 - History Instance
+- Qs:
+    - Is this needed with gatsby's use of @reach/router
+---
+```js
+// src/utils/history.js
 
+import { createBrowserHistory } from "history";
+export default createBrowserHistory();
+```
 
-# Gatsby 
-
-    - gatsby-browser 
+## Auth0 - Install Auth0 Wrapper
+- Notes
+    - I think this is where im going ary
+    - look into `wrapRootElement` in the `gatsby-browser.js`
+---

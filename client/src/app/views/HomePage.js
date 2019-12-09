@@ -6,6 +6,7 @@ import { useAuth0 } from "../../react-auth0-spa.js";
 // import Auth0_buttons from '../components/Auth0_buttons.js'
 
 // CSS
+// TODO: MOVE THIS TO CSS MODULE
 const HomePage_STYLES = {
     border: '1px solid orange',
     padding: '10px'
@@ -27,7 +28,7 @@ const HomePage = () => {
             {/* <header> */}
                 {/* <NavBar /> */}
                 <div>This is the APP HOMEPAGE</div>
-                <div>src > app > views > HomePage</div>
+                <div>src > APP > VIEWS > HomePage</div>
                 {/* <Auth0_buttons /> */}
             {/* </header> */}
         </div>

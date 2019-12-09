@@ -16,6 +16,7 @@ const GATSBY_INDEX = () => {
   return (
     <div style={GATSBY_INDEX_STYLES}>
       <div>This is the GATSBY INDEX</div>
+      <div>src > PAGES > index.js</div>
       <HomePage />
     </div>
   )
