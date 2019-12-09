@@ -15,7 +15,7 @@ const Home = ({ user }) => {
 const Settings = () => <p>Settings</p>
 const Billing = () => <p>Billing</p>
 
-const Account = () => {
+const App = () => {
   if (!isAuthenticated()) {
     login()
     return <p>Redirecting to login...</p>
@@ -27,8 +27,8 @@ const Account = () => {
     <>
       <nav>
         <Link to="/app">Home</Link>{" "}
-        {/* <Link to="/account/settings">Settings</Link>{" "}
-        <Link to="/account/billing">Billing</Link>{" "} */}
+        {/* <Link to="/app/settings">Settings</Link>{" "}
+        <Link to="/app/billing">Billing</Link>{" "} */}
         <a
           href="#logout"
           onClick={e => {
@@ -40,15 +40,15 @@ const Account = () => {
         </a>
       </nav>
       <Router>
-        <Home path="/account" user={user} />
+        <Home path="/app" user={user} />
         {/* <HomePage path="/app" user={user} /> */}
 
         
-        {/* <Settings path="/account/settings" />
-        <Billing path="/account/billing" /> */}
+        {/* <Settings path="/app/settings" />
+        <Billing path="/app/billing" /> */}
       </Router>
     </>
   )
 }
 
-export default Account
+export default App
