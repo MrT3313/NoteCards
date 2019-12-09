@@ -1,33 +1,17 @@
-// src/index.js
+// IMPORTS
+import React from 'react'
 
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "../app";
-import * as serviceWorker from "./serviceWorker";
-import { Auth0Provider } from "../react-auth0-spa";
-import config from "../auth_config.json";
-import history from "../utils/history.js";
+// COMPONENTS
 
-// A function that routes the user to the right place
-// after login
-const onRedirectCallback = appState => {
-    history.push(
-        appState && appState.targetUrl
-        ? appState.targetUrl
-        : window.location.pathname
-    );
-};
+// const HomePage_Test = () => <p>HomePage_Test</p> 
+// const AppHome = () => <p>AppHome</p>
 
-ReactDOM.render(
-  <Auth0Provider
-    domain={config.domain}
-    client_id={config.clientId}
-    redirect_uri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}
-  >
-    <App />
-  </Auth0Provider>,
-  document.getElementById("root")
-);
+// MAIN COMPONENT TO EXPORT
+const GATSBY_INDEX = () => {
+  return (
+    <div>HELLO FROM INDEX</div>
+  )
+}
 
-serviceWorker.unregister();
+// EXPORT
+export default GATSBY_INDEX
