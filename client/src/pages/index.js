@@ -2,14 +2,22 @@
 import React from 'react'
 
 // COMPONENTS
+import HomePage from '../app/views/HomePage.js'
 
-// const HomePage_Test = () => <p>HomePage_Test</p> 
-// const AppHome = () => <p>AppHome</p>
+// CSS 
+// TODO: MOVE THIS TO CSS MODULE
+const GATSBY_INDEX_STYLES = {
+  border: '1px solid blue',
+  padding: '10px'
+}
 
 // MAIN COMPONENT TO EXPORT
 const GATSBY_INDEX = () => {
   return (
-    <div>HELLO FROM INDEX</div>
+    <div style={GATSBY_INDEX_STYLES}>
+      <div>This is the GATSBY INDEX</div>
+      <HomePage />
+    </div>
   )
 }
 
