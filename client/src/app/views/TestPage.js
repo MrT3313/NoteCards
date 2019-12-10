@@ -2,10 +2,10 @@
 import React from 'react'
 
 // LAYOUTS
-import MainLayout from '../layouts/MainLayout.js.js'
+import MainLayout from '../layouts/MainLayout.js'
 
 // COMPONENTS
-import Sidebar from '../layouts/SidebarLayout.js.js'
+import Sidebar from '../layouts/SidebarLayout.js'
 
 // CSS 
 

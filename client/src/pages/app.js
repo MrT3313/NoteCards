@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 
 // COMPONENTS
-import APP_INDEX from '../app/index.js.js'
+import APP_INDEX from '../app/index.js'
 
 const App = () => {
   if (!isAuthenticated()) {
