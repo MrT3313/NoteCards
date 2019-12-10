@@ -1,13 +1,88 @@
-@import 'gloal';
+@import 'global';
 
-/* LANDING PAGE */
-.LandingPage_CONTAINER {
+.index {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding: 20px;
+    padding: $base_margin;
 }
+
+.client_LOGO {
+    height: 250px;
+    width: 250px;
+
+    border: 3px solid black;
+}
+
+.welcomeContent {
+    h2 {
+        font-family: $PermanentMarker_font-family;
+        // font-family: $Mansalva_fomt-family;
+        font-size: 2rem;
+
+        margin-top: $vertical_margin ;
+        margin-bottom: $vertical_margin ;
+    }
+};
+
+.userAction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .select {
+        display: flex;
+
+        option {
+            text-align: center;
+        }
+
+
+        // font-family: $PermanentMarker_font-family;
+        font-family: $Mansalva_fomt-family;
+        // font-family: $IndieFlower_font-family;
+        font-size: 1rem;
+
+        background: transparent;
+    
+        height: 3rem;
+        width: 12rem;
+
+        color: $mainColor--green;
+        font-weight: bold;
+        background: $mainColor--tan;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        font-family: $PermanentMarker_font-family;
+        // font-family: $Mansalva_fomt-family;
+        // font-family: $IndieFlower_font-family;
+        font-size: 1.5rem;
+        font-weight: bold; 
+
+        margin-top: $vertical_margin;
+    }
+}
+
+
+
+
+
+// ⌄⌄⌄⌄⌄⌄ OLD ⌄⌄⌄⌄⌄⌄ // 
+
+/* LANDING PAGE */
+// .LandingPage_CONTAINER {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     padding: 20px;
+// }
 
 .LandingPage_CONTAINER h3 {
     margin: 30px;
@@ -26,8 +101,3 @@
     border-radius: 10px; 
 }
 
-.client_LOGO {
-    border: 3px solid black;
-    height: 250px;
-    width: 250px;
-}
