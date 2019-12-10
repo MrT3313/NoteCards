@@ -3,9 +3,9 @@ import React from 'react'
 import {Router} from '@reach/router'
 
 // COMPONENTS
-import HomePage from '../app/views/HomePage.js'
-import StudyPage from '../app/views/StudyPage.js'
-import TestPage from '../app/views/TestPage.js'
+import HomePage from './views/HomePage.js.js'
+import StudyPage from './views/StudyPage.js.js'
+import TestPage from './views/TestPage.js.js'
 
 // MAIN COMPONENT TO EXPORT
 const APP_INDEX = () => {
