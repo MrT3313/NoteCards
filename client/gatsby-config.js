@@ -1,11 +1,18 @@
 // configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
 
 // -- //
-require('dotenv').config()
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 console.log(process.env)
-console.log('Space ID:',process.env.CONTENTFUL_SPACE_ID)
-console.log('Access Token:',process.env.CONTENTFUL_ACCESS_TOKEN)
+
+console.log('Space ID:',process.env.CONTENTFUL_spaceID)
+console.log('Access Token:',process.env.CONTENTFUL_accessToken)
 module.exports = {
+  
+  // METADATA
   siteMetadata: {
     // title: `Gatsby Default Starter`,
     title: `NoteCards`,
@@ -13,8 +20,10 @@ module.exports = {
     description: `Description`,
     author: `Reed Turgeon`,
   },
+
+  // PLUGINS
   plugins: [
-    // ACCESS: Markdown Data Plugin
+    // - 1 - // ACCESS: Markdown Data Plugin
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,39 +31,31 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-
-    // TRANSFORM: Markdown File into usefull html
+    // - 1.1 - // TRANSFORM: Markdown File into usefull html
     `gatsby-transformer-remark`,
 
-    // SASS Plugin
-    `gatsby-plugin-sass`,
-
-    // Images
-    // `gatsby-plugin-sharp`,
-    // `gatsby-transformer-sharp`,
-
+    // - 2 - // Contentful CMS Plugin
     {
       resolve: `gatsby-source-contentful`,
       options: {
         // Learn about environment variables: https://gatsby.dev/env-vars
 
-        // spaceId: process.env.CONTENTFUL_SPACE_ID,
-        spaceId: 'dr9akv6vk3ki',
-        
-        // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        accessToken: 'wagOJCJBBQCL7W2km6YGHl8Sph1UkVdr490kY3VXed8',
+        spaceId: process.env.CONTENTFUL_spaceID,
+        accessToken: process.env.CONTENTFUL_accessToken,
       },
     },
 
+    // - 3 - // SASS Plugin
+    `gatsby-plugin-sass`,
 
+    // - 4 - // Protecting HTML requests
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images`,
-    //   },
-    // },
+
+
+    // Images
+    // `gatsby-plugin-sharp`,
+    // `gatsby-transformer-sharp`,
+
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
