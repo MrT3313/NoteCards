@@ -1,9 +1,16 @@
+// IMPORTS
 import React from "react"
 import { Link } from "gatsby"
 
-export default () => (
+// COMPONENTS
+import LandingPage from '../app/views/LandingPage.js'
+
+// MAIN COMPONENT TO EXPORT
+const GATSBY_INDEX = () => (
   <div>
-    <p>Hello Gatsby!</p>
-    <Link to="/app">Go to your app</Link>
+    <LandingPage />
   </div>
 )
+
+// EXPORT
+export default GATSBY_INDEX

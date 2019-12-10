@@ -4,8 +4,8 @@ import { Link } from "gatsby"
 
 // COMPONENTS
 
-// CSS
-import SidebarLayout_STYLES from '../../styles/SidebarLayout.module.css'
+// SCSS
+import SidebarLayout_STYLES from '../../styles/SidebarLayout.module.scss'
 
 // MAIN COMPONENT TO EXPORT
 const SidebarLayout = (props) => {

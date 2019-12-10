@@ -9,8 +9,7 @@ import PropTypes from "prop-types"
 // COMPONENTS
 
 
-// CSS
-// import StudySetOption_STYLES from '../../styles/studySetOption.module.css'
+// SCSS
 import StudySetOption_STYLES from '../../styles/studySetOption.module.scss'
 
 

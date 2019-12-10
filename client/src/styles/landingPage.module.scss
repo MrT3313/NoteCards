@@ -1,0 +1,33 @@
+@import 'gloal';
+
+/* LANDING PAGE */
+.LandingPage_CONTAINER {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.LandingPage_CONTAINER h3 {
+    margin: 30px;
+    font-size: 40px;
+}
+
+.LandingPage_CONTAINER h2 {
+    margin: 20px;
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.LandingPage_CONTAINER button {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px; 
+}
+
+.client_LOGO {
+    border: 3px solid black;
+    height: 250px;
+    width: 250px;
+}

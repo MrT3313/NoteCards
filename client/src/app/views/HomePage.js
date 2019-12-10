@@ -9,7 +9,7 @@ import MainLayout from '../layouts/MainLayout.js'
 import Sidebar from '../layouts/SidebarLayout.js'
 import StudySetOption from '../components/StudySetOption.js'
 
-// CSS
+// SCSS
 import HomePage_STYLES from '../../styles/homePage.module.scss'
 
 // MAIN COMPONENT TO EXPORT
