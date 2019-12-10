@@ -3,16 +3,16 @@ import React, {Component} from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 // LAYOUTS
-import MainLayout from '../layouts/MainLayout.js.js'
+import MainLayout from '../layouts/MainLayout.js'
 
 // COMPONENTS
-import Sidebar from '../layouts/SidebarLayout.js.js'
+import Sidebar from '../layouts/SidebarLayout.js'
 
 
-import StudySetOption from '../components/StudySetOption.js.js'
+import StudySetOption from '../components/StudySetOption.js'
 
 // CSS
-import HomePage_STYLES from '../styles/homePage.module.css'
+import HomePage_STYLES from '../../styles/homePage.module.css'
 
 // MAIN COMPONENT TO EXPORT
 

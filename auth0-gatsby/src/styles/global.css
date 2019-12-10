@@ -1,5 +1,6 @@
 /* Global CSS Styles */
-:root {
+/* :root { */
+html, body {
     --mainColor--red: #700000;
     --mainColor--green: #045C43;
     --mainColor--tan: #bd9b6b;

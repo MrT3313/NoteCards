@@ -7,13 +7,7 @@ import { Link } from "gatsby"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 
 // COMPONENTS
-// import HomePage from '../app/views/HomePage.js'
-
-const Home = ({ user }) => {
-  return <p>Hi, {user.name ? user.name : "friend"}!</p>
-}
-const Settings = () => <p>Settings</p>
-const Billing = () => <p>Billing</p>
+import APP_INDEX from '../app/index.js'
 
 const App = () => {
   if (!isAuthenticated()) {
@@ -39,14 +33,7 @@ const App = () => {
           Log Out
         </a>
       </nav>
-      <Router>
-        <Home path="/app" user={user} />
-        {/* <HomePage path="/app" user={user} /> */}
-
-        
-        {/* <Settings path="/app/settings" />
-        <Billing path="/app/billing" /> */}
-      </Router>
+      <APP_INDEX path="/app" user={user} />
     </>
   )
 }

@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 
 
 // CSS
-import StudySetOption_STYLES from '../styles/studySetOption.module.css'
+import StudySetOption_STYLES from '../../styles/studySetOption.module.css'
 
 
 // MAIN COMPONENT TO EXPORT
@@ -21,12 +21,8 @@ const StudySetOption = (props) => {
             <div className={StudySetOption_STYLES.box_1}>
                 {props.item}
             </div>
-            <div className={StudySetOption_STYLES.box_2}>
-                2
-            </div>
-            <div className={StudySetOption_STYLES.box_3}>
-                3
-            </div>
+            <div className={StudySetOption_STYLES.box_2}></div>
+            <div className={StudySetOption_STYLES.box_3}></div>
         </div>
     )
 }

@@ -1,11 +1,11 @@
-// IMPORTS
+/// IMPORTS
 import React from 'react'
 import { Link } from "gatsby"
 
 // COMPONENTS
 
 // CSS
-import SidebarLayout_STYLES from '../styles/SidebarLayout.module.css'
+import SidebarLayout_STYLES from '../../styles/SidebarLayout.module.css'
 
 // MAIN COMPONENT TO EXPORT
 const SidebarLayout = (props) => {
@@ -26,8 +26,8 @@ const SidebarLayout = (props) => {
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/StudyPage/">Study</Link></li>
-                            <li><Link to="/TestPage/">Test</Link></li>
+                            <li><Link to="/app/StudyPage/">Study</Link></li>
+                            <li><Link to="/app/TestPage/">Test</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const SidebarLayout = (props) => {
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/HomePage/">Exit to Home</Link></li>
+                            <li><Link to="/app/HomePage/">Exit to Home</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const SidebarLayout = (props) => {
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/HomePage/">Exit to Home</Link></li>
+                            <li><Link to="/app/HomePage/">Exit to Home</Link></li>
                         </ul>
                     </div>
                 </div>
