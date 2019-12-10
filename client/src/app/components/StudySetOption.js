@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 
 
 // CSS
-import StudySetOption_STYLES from '../../styles/studySetOption.module.css'
+// import StudySetOption_STYLES from '../../styles/studySetOption.module.css'
+import StudySetOption_STYLES from '../../styles/studySetOption.module.scss'
 
 
 // MAIN COMPONENT TO EXPORT

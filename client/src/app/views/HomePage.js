@@ -7,16 +7,12 @@ import MainLayout from '../layouts/MainLayout.js'
 
 // COMPONENTS
 import Sidebar from '../layouts/SidebarLayout.js'
-
-
 import StudySetOption from '../components/StudySetOption.js'
 
 // CSS
-import HomePage_STYLES from '../../styles/homePage.module.css'
+import HomePage_STYLES from '../../styles/homePage.module.scss'
 
 // MAIN COMPONENT TO EXPORT
-
-// - V1 - // Functional Components (what is comes with)
 const HomePage = () => {
     const data = useStaticQuery(query)
     const uniqueArray = []
