@@ -1,0 +1,14 @@
+@import 'global';
+
+.index {
+    display: flex;
+
+    flex-grow: 1; 
+    // max-width: 80%;
+    // min-width: 50%;
+    // max-height: 90%;
+    // min-height: 50%;
+
+    border-radius: $base_radius;
+    border: 1px solid grey;
+}

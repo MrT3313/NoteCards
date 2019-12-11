@@ -11,32 +11,22 @@ import { Link } from 'gatsby'
 // SCSS
 import StudySetOption_STYLES from '../../styles/studySetOption.module.scss'
 
-// - A - // MAIN COMPONENT TO EXPORT
+// MAIN COMPONENT TO EXPORT
 const StudySetOption = (props) => {
-    // - A.1 - // Data Check
+    // - A - // Data Check
     console.log('StudySetOption Props', props)
     console.log('StudySetOption Props.HISTORY', props.history)
 
-    // - A.2 - // Component State
+    // - B - // Component State
     const [hoverState, setHoverState] = useState(false)
     console.log('Current Hover State',hoverState)
 
-    // - A.3 - // Component Methods
+    // - C - // Component Methods
     const handleMouseHover = () => {
         setHoverState(!hoverState)
     }
-
-    const clickHandler = () => {
-        console.log('CLICKED')
-        routeToStudySet(props.item)
-    }
-
-    const routeToStudySet = (props) => {
-        console.log(props)
-
-    }
     
-    // - A.4 - // Render
+    // - D - // Render
     return (
         <div 
             className={
@@ -44,8 +34,6 @@ const StudySetOption = (props) => {
             }
             onMouseEnter={handleMouseHover}
             onMouseLeave={handleMouseHover}
-
-            onClick={clickHandler}
         >
             {hoverState ? 
                 <Link 
