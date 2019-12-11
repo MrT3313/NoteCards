@@ -25,9 +25,9 @@ const HomePage = () => {
             <div className={HomePage_STYLES.index}>
                 {/* // - B.1 - // Make Unique Array */}
                 {data.allContentfulCard.edges.forEach((element, key) => {
-                    element.node.studySets.forEach((item, key) => {
-                        if(!uniqueArray.includes(item)) {
-                            uniqueArray.push(item)
+                    element.node.studySets.forEach((set, key) => {
+                        if(!uniqueArray.includes(set)) {
+                            uniqueArray.push(set)
                         }
                     })    
                 })}
@@ -46,13 +46,12 @@ const query = graphql`
     query {
         allContentfulCard {
             edges {
-                node {
+                node {  
                     studySets
                 }
             }
-        },
-    }
-`
+        }
+    }`
 
 // EXPORTS
 export default HomePage

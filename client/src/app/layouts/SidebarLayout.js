@@ -59,7 +59,7 @@ const SidebarLayout = (props) => {
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/app/HomePage/">Exit to Home</Link></li>
+                            <li><Link to="/app/">Exit to Home</Link></li>
                         </ul>
                     </div>
                 </div>
