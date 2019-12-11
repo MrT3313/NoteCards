@@ -1,7 +1,5 @@
 // IMPORTS
 import React from 'react'
-import { Link, graphql, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
 
 // LAYOUTS
 

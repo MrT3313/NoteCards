@@ -6,10 +6,6 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
 
-console.log(process.env)
-
-console.log('Space ID:',process.env.CONTENTFUL_spaceID)
-console.log('Access Token:',process.env.CONTENTFUL_accessToken)
 module.exports = {
   
   // METADATA

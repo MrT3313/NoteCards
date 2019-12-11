@@ -1,6 +1,6 @@
 // IMPORTS
-import React, {Component} from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React from "react"
+import {graphql, useStaticQuery } from "gatsby"
 
 // LAYOUTS
 import MainLayout from '../layouts/MainLayout.js'
