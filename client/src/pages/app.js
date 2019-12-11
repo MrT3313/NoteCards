@@ -3,7 +3,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 // Auth0
-import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
+import { 
+  login, 
+  // logout, 
+  isAuthenticated, 
+  getProfile } from "../utils/auth.js"
 
 // COMPONENTS
 import APP_INDEX from '../app/index.js'
@@ -18,20 +22,6 @@ const App = () => {
 
   return (
     <>
-      <nav>
-        <Link to="/app">Home</Link>{" "}
-        {/* <Link to="/app/settings">Settings</Link>{" "}
-        <Link to="/app/billing">Billing</Link>{" "} */}
-        <a
-          href="#logout"
-          onClick={e => {
-            logout()
-            e.preventDefault()
-          }}
-        >
-          Log Out
-        </a>
-      </nav>
       <APP_INDEX path="/app" user={user} />
     </>
   )

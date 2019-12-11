@@ -1,27 +1,28 @@
-// FONTS
-// - 1 - // 
+// - A - // FONTS
+// A.1 
 // BOLD -- Permanent Marker
     @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
     $PermanentMarker_font-family: 'Permanent Marker', cursive;
 
-// - 2 - //
+// A.2
 // MEDIUM -- Mansalva
     @import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
 
     $Mansalva_fomt-family: 'Mansalva', cursive;
 
-// // - 3 - //
-// // LIGHT -- Indie Flower
-// @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+// A.3
+// LIGHT -- Indie Flower
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
-$IndieFlower_font-family: 'Indie Flower', cursive;
+    $IndieFlower_font-family: 'Indie Flower', cursive;
 
-// GLOBAL VARIABLES
+// - B - // COLORS
 $mainColor: #700000;
 $mainColor--green: #045C43;
 $mainColor--tan: #bd9b6b;
 $secondaryColor--tan: #F0D4B8;
 
+// - C - // GLOBAL VARIABLES
 $base_margin: 30px;
 $vertical_margin: $base_margin;

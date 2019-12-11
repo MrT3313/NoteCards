@@ -70,7 +70,8 @@ export const handleAuthentication = () => {
 }
 
 export const getProfile = () => {
-  return user
+  // return user
+  return [user, tokens]
 }
 
 export const logout = () => {

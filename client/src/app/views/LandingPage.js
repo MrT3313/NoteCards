@@ -43,13 +43,13 @@ const LandingPage = () => {
     )
 }
 
-// - A.1 - // Component GraphQL QUery
+// - A.1 - // Component GraphQL Query
 const query = graphql`
     query {
         site {
-        siteMetadata {
-            title
-            subTitle
+            siteMetadata {
+                title
+                subTitle
             }
         }
     }`
