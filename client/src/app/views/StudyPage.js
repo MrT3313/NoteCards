@@ -7,7 +7,7 @@ import MainLayout from '../layouts/MainLayout.js'
 // COMPONENTS
 import Sidebar from '../layouts/SidebarLayout.js'
 
-// CSS
+// CSSS
 
 // MAIN COMPONENT TO EXPORT
 const StudyPage = () => {
