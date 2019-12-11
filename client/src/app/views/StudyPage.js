@@ -16,28 +16,37 @@ import StudyPage_STYLES from '../../styles/studyPage.module.scss'
 // MAIN COMPONENT TO EXPORT
 const StudyPage = (props) => {
     // - A - // Data & Variables
-    const data = useStaticQuery(query)
+    const { uniqueSets, set, allData } = props.location.state.props
+    console.log('STUDY PAGE props:', props)
+    console.log('uniqueSets', uniqueSets)
+    console.log('set', set)
+    console.log('allData', allData)
+
     const [filtered, setFiltered] = useState([])
-    const category = props.location.state.props.item
+    // const category = props.location.state.props.item
 
     useEffect(() => {
         console.log("USE EFFECT")
+        console.log(allData)
 
         let filteredArray = []
 
-        data.allContentfulCard.edges.forEach( edge => {
-            console.log(edge.node)
-            edge.node.studySets.forEach( set => {
-                console.log(set)
-                if (set === category) {
-                    filteredArray.push(edge)
+        allData.forEach( data => {
+            console.log(data)
+            // console.log(category)
+
+            data.node.studySets.forEach(item => {
+                console.log('item', item)
+                if (item === set.node.title) {
+                    console.log("ADD IT")
+                    !filteredArray.includes(data) && filteredArray.push(data)
                 }
             })
         })
         setFiltered(filteredArray)
-    }, [data.allContentfulCard.edges, category])
+    }, [allData])
 
-    console.log('APP STATE FILTERED ARRAY',filtered)
+    console.log('STUDY PAGE FILTERED ARRAY',filtered)
 
     // - B - // Return
     return(
@@ -45,25 +54,11 @@ const StudyPage = (props) => {
             {/* <StudySidebar /> */}
             <Sidebar type="Study"/>
             <div className={StudyPage_STYLES.index}>
-                <CARD_INDEX />
+                {filtered.map( (item, key) => <CARD_INDEX item={item}/> )}
             </div>
         </MainLayout>
     )
 }
-
-// - A.1 - // Component GraphQL Query
-const query = graphql`
-    query {
-        allContentfulCard {
-            edges {
-                node {  
-                    title
-                    tabTitle
-                    studySets
-                }
-            }
-        }
-    }`
 
 // EXPORTS
 export default StudyPage

@@ -1,0 +1,21 @@
+@import 'global';
+
+.index {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 10px;
+    width: 100%;
+    // flex-grow: 1
+}
+
+.text {
+    font-size: .5rem;
+
+}
+.line {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid black;
+}

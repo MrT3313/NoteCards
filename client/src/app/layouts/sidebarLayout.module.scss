@@ -1,4 +1,4 @@
-@import 'global';
+@import '../../styles/global';
 
 // - 1 - // DISPLAY FLEX
 .index, 
@@ -15,9 +15,31 @@
     justify-content: space-between;
 
     background-color: $secondaryColor--tan;
-    /* background-color: var(--mainColor--tan); */
 
     border-radius: 5px;
+
+    a {
+        text-decoration: none;
+        color: $mainColor--green;
+        // font-family: $Mansalva_fomt-family;
+        font-family: $IndieFlower_font-family;
+    }
+    h4 {
+        font-size: 2rem;
+        font-family: $Mansalva_fomt-family;
+        // font-family: $IndieFlower_font-family;
+
+        margin-top: $vertical_margin / 4;
+        margin-bottom: $vertical_margin / 4;
+    }
+    h5 {
+        font-size: 1rem;
+        font-family: $Mansalva_fomt-family;
+        // font-family: $IndieFlower_font-family;
+
+        margin-top: $vertical_margin / 2;
+        margin-bottom: $vertical_margin / 2;
+    }
 }
 
 /* - 3.1 - Sidebar Middle - Sidebar Content */
@@ -29,6 +51,12 @@
     margin-bottom: $vertical_margin / 3; 
 
     padding: 0px 10px 0px 10px;
+
+    h4:last-child {
+        margin-top: 0px;
+        padding-bottom: $vertical_margin / 3;
+        border-bottom: 3px dashed black;
+    }
 
     div {
         margin-bottom: $vertical_margin / 3;

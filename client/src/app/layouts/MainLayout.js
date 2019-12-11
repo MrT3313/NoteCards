@@ -5,7 +5,7 @@ import React from 'react'
 
 
 // SCSS
-import MainLayout_STYLES from '../../styles/mainLayout.module.scss'
+import MainLayout_STYLES from './mainLayout.module.scss'
 
 // MAIN COMPONENT TO EXPORT
 const MainLayout = (props) => {

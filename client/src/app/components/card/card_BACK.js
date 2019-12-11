@@ -6,6 +6,7 @@ import React from 'react'
 // COMPONENTS
 
 // SCSS
+import card_FRONT_STYLES from '../../../styles/cards.module.scss'
 
 // MAIN COMPONENT TO EXPORT
 const BACK_card = () => {

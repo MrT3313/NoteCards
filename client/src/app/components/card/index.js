@@ -13,8 +13,9 @@ import Card_STYLES from '../../../styles/cards.module.scss'
 
 
 // MAIN COMPONENT TO EXPORT
-const CARD_INDEX = () => {
+const CARD_INDEX = (props) => {
     // - A - // Data & Variables
+    console.log('CARD INDEX props: ', props)
     const [cardSide, setCardSide ] = useState('FRONT')
 
     // - B - // Return
@@ -28,13 +29,11 @@ const CARD_INDEX = () => {
         <div className={Card_STYLES.index}
             onClick={clickHandler}
         >
-            <CardLayout 
-                // onClick={clickHandler}
-            >
+            <CardLayout>
                 {cardSide === "FRONT" ?
-                    <FRONT_card />
+                    <FRONT_card item={props.item}/>
                     :
-                    <BACK_card />
+                    <BACK_card item={props.item}/>
                 }
             </CardLayout>
         </div>

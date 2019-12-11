@@ -15,7 +15,8 @@ import StudySetOption_STYLES from '../../styles/studySetOption.module.scss'
 const StudySetOption = (props) => {
     // - A - // Data Check
     console.log('StudySetOption Props', props)
-    console.log('StudySetOption Props.HISTORY', props.history)
+    const { set } = props
+    console.log('set', set)
 
     // - B - // Component State
     const [hoverState, setHoverState] = useState(false)
@@ -39,13 +40,13 @@ const StudySetOption = (props) => {
                 <Link 
                     className={StudySetOption_STYLES.box_1}
                     to="/app/StudyPage"
-                    state={{ props: props}}
+                    state={{ props: props, set: set}}
                 >
                     Click To Start Studying!
                 </Link>
                 :
                 <div className={StudySetOption_STYLES.box_1}>
-                    {props.item}
+                    {set.node.title}
                 </div>
             }
             <div className={StudySetOption_STYLES.box_2}></div>
