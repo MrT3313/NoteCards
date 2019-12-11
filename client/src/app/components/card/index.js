@@ -16,6 +16,7 @@ import Card_STYLES from '../../../styles/cards.module.scss'
 const CARD_INDEX = (props) => {
     // - A - // Data & Variables
     console.log('CARD INDEX props: ', props)
+    const {uniqueSets} = props
     const [cardSide, setCardSide ] = useState('FRONT')
 
     // - B - // Return
@@ -31,7 +32,7 @@ const CARD_INDEX = (props) => {
         >
             <CardLayout>
                 {cardSide === "FRONT" ?
-                    <FRONT_card item={props.item}/>
+                    <FRONT_card item={props.item} uniqueSets={uniqueSets}/>
                     :
                     <BACK_card item={props.item}/>
                 }

@@ -16,11 +16,11 @@ const StudySetOption = (props) => {
     // - A - // Data Check
     console.log('StudySetOption Props', props)
     const { set } = props
-    console.log('set', set)
+    // console.log('set', set)
 
     // - B - // Component State
     const [hoverState, setHoverState] = useState(false)
-    console.log('Current Hover State',hoverState)
+    // console.log('Current Hover State',hoverState)
 
     // - C - // Component Methods
     const handleMouseHover = () => {

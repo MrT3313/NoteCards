@@ -1,6 +1,5 @@
 // IMPORTS
 import React, {useState, useEffect} from 'react'
-import { useStaticQuery } from 'gatsby'
 
 // LAYOUTS
 import MainLayout from '../layouts/MainLayout.js'
@@ -8,7 +7,6 @@ import MainLayout from '../layouts/MainLayout.js'
 // COMPONENTS
 import Sidebar from '../layouts/SidebarLayout.js'
 import CARD_INDEX from '../components/card/index.js'
-
 
 // CSSS
 import StudyPage_STYLES from '../../styles/studyPage.module.scss'
@@ -54,7 +52,7 @@ const StudyPage = (props) => {
             {/* <StudySidebar /> */}
             <Sidebar type="Study"/>
             <div className={StudyPage_STYLES.index}>
-                {filtered.map( (item, key) => <CARD_INDEX item={item}/> )}
+                {filtered.map( (item, key) => <CARD_INDEX item={item} uniqueSets={uniqueSets}/> )}
             </div>
         </MainLayout>
     )

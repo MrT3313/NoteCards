@@ -26,8 +26,8 @@
         display: flex;
         position: absolute;
 
-        height: 2.5rem;
-        width: 2.5rem;
+        min-height: 2.5rem;
+        min-width: 2.5rem;
 
         border: 1px solid purple;
     }
@@ -46,10 +46,10 @@
         top: 0;
         right: 0;
 
-        height: 4rem;
-        .tabs {
-    
-        }
+        // height: 4rem;
+        width: 60px;
+
+        flex-direction: column;
     }
     .bottomRight {
         bottom: 0;

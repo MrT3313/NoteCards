@@ -25,7 +25,7 @@ const HomePage = () => {
             <Sidebar type="Home"/> 
             <div className={HomePage_STYLES.index}>
                 {data.allContentfulStudySet.edges.forEach( edge => {
-                    console.log(edge)
+                    // console.log(edge)
                     
                     if(!uniqueArray.includes(edge.node.title)) {
                         uniqueArray.push(edge)
