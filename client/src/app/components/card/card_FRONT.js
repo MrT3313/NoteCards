@@ -3,6 +3,11 @@ import React, { useState, useEffect } from 'react'
 
 // LAYOUTS
 
+// SVGs
+import Star_full_green from "../../../assets/star_empty_green.svg";
+import Star_empty_green from "../../../assets/star_full_green.svg";
+import Beverage from '../../../assets/wine.svg'
+
 // COMPONENTS
 import Tab from './Tab.js'
 
@@ -74,7 +79,9 @@ const FRONT_card = (props) => {
             <div className={card_FRONT_STYLES.title}>
                 {item.node.title}
             </div>
-            <div className={card_FRONT_STYLES.topLeft}></div>
+            <div className={card_FRONT_STYLES.topLeft}>
+                <Star_full_green width="2rem" height="2rem"/>
+            </div>
             <div className={card_FRONT_STYLES.topRight}>
                 
                 {/* 
@@ -95,7 +102,9 @@ const FRONT_card = (props) => {
                     return <Tab tabTitle={set.title}/>
                 })}
             </div>
-            <div className={card_FRONT_STYLES.bottomRight}></div>
+            <div className={card_FRONT_STYLES.bottomRight}>
+                <Beverage width="2rem" height="2rem"/>
+            </div>
         </div>
     )
 }

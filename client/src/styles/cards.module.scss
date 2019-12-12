@@ -35,6 +35,9 @@
     .topLeft {
         top: 0;
         left:0;
+
+        justify-content: center;
+        align-items: center;
         .favorite {
     
         }
@@ -54,6 +57,8 @@
     .bottomRight {
         bottom: 0;
         right: 0;
+        justify-content: center;
+        align-items: center;
         .pairing {
     
         }

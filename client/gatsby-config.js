@@ -47,6 +47,16 @@ module.exports = {
     // - 4 - // Protecting HTML requests
     `gatsby-plugin-react-helmet`,
 
+    // - 5 - // Using SVGs
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /assets\/.*\.svg$/,
+        },
+      },
+    }
+
 
     // Images
     // `gatsby-plugin-sharp`,
