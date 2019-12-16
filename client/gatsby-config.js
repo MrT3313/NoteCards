@@ -52,12 +52,12 @@ module.exports = {
           "client/src/app/layouts/sidebarLayout.module.scss",
           // // - 3.1 - Styles
           "client/src/styles/_global.scss",
-          // "client/src/styles/cards.module.scss",
-          // "client/src/styles/homePage.module.scss",
-          // "client/src/styles/landingPage.module.scss",
-          // "client/src/styles/studyPage.module.scss",
-          // "client/src/styles/studySetOption.module.scss",
-          // "client/src/styles/tab.module.scss,"
+          "client/src/styles/cards.module.scss",
+          "client/src/styles/homePage.module.scss",
+          "client/src/styles/landingPage.module.scss",
+          "client/src/styles/studyPage.module.scss",
+          "client/src/styles/studySetOption.module.scss",
+          "client/src/styles/tab.module.scss,"
         ],
       },
     },
