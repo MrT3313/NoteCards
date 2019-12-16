@@ -42,7 +42,25 @@ module.exports = {
     },
 
     // - 3 - // SASS Plugin
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: [
+          // - 3.1 - Layouts
+          "client/src/app/layouts/cardLayout.module.scss",
+          "client/src/app/layouts/mainLayout.module.scss",
+          "client/src/app/layouts/sidebarLayout.module.scss",
+          // // - 3.1 - Styles
+          // "client/src/styles/_global.scss",
+          // "client/src/styles/cards.module.scss",
+          // "client/src/styles/homePage.module.scss",
+          // "client/src/styles/landingPage.module.scss",
+          // "client/src/styles/studyPage.module.scss",
+          // "client/src/styles/studySetOption.module.scss",
+          // "client/src/styles/tab.module.scss,"
+        ],
+      },
+    },
 
     // - 4 - // Protecting HTML requests
     `gatsby-plugin-react-helmet`,
