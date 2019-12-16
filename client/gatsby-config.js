@@ -51,7 +51,7 @@ module.exports = {
           "client/src/app/layouts/mainLayout.module.scss",
           "client/src/app/layouts/sidebarLayout.module.scss",
           // // - 3.1 - Styles
-          // "client/src/styles/_global.scss",
+          "client/src/styles/_global.scss",
           // "client/src/styles/cards.module.scss",
           // "client/src/styles/homePage.module.scss",
           // "client/src/styles/landingPage.module.scss",
