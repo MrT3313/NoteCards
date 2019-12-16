@@ -1,6 +1,5 @@
 // IMPORTS
 import React from "react"
-import { Link } from "gatsby"
 
 // Auth0
 import { 

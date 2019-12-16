@@ -1,0 +1,28 @@
+@import 'global';
+
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+
+    padding: 10px 0 10px 0;
+
+    min-height: 250px;
+    flex-grow: 1;
+
+    border: 1px dashed black;
+}
+
+.incrementor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around; 
+
+    width: 25%;
+    min-height: 25px;
+
+    margin-bottom: 10px;
+
+}

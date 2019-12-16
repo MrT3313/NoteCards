@@ -18,23 +18,21 @@ const HomePage = () => {
     const data = useStaticQuery(query)
     const uniqueArray = []
 
+    console.log('HomePage Data:', data)
     // - B - // Return
     return (
         <MainLayout>
             <Sidebar type="Home"/> 
             <div className={HomePage_STYLES.index}>
-                {/* // - B.1 - // Make Unique Array */}
-                {data.allContentfulCard.edges.forEach((element, key) => {
-                    element.node.studySets.forEach((item, key) => {
-                        if(!uniqueArray.includes(item)) {
-                            uniqueArray.push(item)
-                        }
-                    })    
+                {data.allContentfulStudySet.edges.forEach( edge => {
+                    // console.log(edge)
+                    
+                    if(!uniqueArray.includes(edge.node.title)) {
+                        uniqueArray.push(edge)
+                    }  
                 })}
-                
-                {/* // - B.2 - //  Map over and render individual studySets  */}
                 {uniqueArray.map((set, key) => {
-                    return <StudySetOption item={set}/>
+                    return <StudySetOption uniqueSets={uniqueArray} set={set} allData={data.allContentfulCard.edges}/>
                 })}
             </div>
         </MainLayout>
@@ -46,13 +44,26 @@ const query = graphql`
     query {
         allContentfulCard {
             edges {
-                node {
+                node {  
+                    title
+                    mainDescription {
+                        json
+                    }
+                    tabTitle
                     studySets
+                    locationIDs
                 }
             }
-        },
-    }
-`
+        }
+        allContentfulStudySet {
+            edges {
+                node {  
+                    title
+                    description
+                }
+            }
+        }
+    }`
 
 // EXPORTS
 export default HomePage

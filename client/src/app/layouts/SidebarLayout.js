@@ -8,7 +8,7 @@ import { logout } from '../../utils/auth.js'
 // COMPONENTS
 
 // SCSS
-import SidebarLayout_STYLES from '../../styles/SidebarLayout.module.scss'
+import SidebarLayout_STYLES from './SidebarLayout.module.scss'
 
 // MAIN COMPONENT TO EXPORT
 const SidebarLayout = (props) => {
@@ -16,29 +16,27 @@ const SidebarLayout = (props) => {
     const data = useStaticQuery(query)
 
     // - B - // Return
-    console.log(props)
+    // console.log(props)
     // const {type} = props.type
     // console.log(type)
     return(
         <div className={SidebarLayout_STYLES.index}>            
-            {/* V1 */}
-            {/* {props.children}             */}
 
             {/* V2 */}
             {props.type === 'Home' && 
                 <div className={SidebarLayout_STYLES.homeSidebar}>
                     <div className={SidebarLayout_STYLES.sidebarContent}>
-                        <div>Welcome</div>
+                        <h4>Welcome</h4>
                         {/* <div>{data.site.siteMetadata.author}</div> */}
-                        <div>{
-                            (data.site.siteMetadata.author).split(' ')[0]
-                        }</div>
+                        <h4>
+                            {(data.site.siteMetadata.author).split(' ')[0]}
+                        </h4>
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/app/StudyPage/">Study</Link></li>
-                            <li><Link to="/app/TestPage/">Test</Link></li>
-                            <li><a
+                            <li><h5><Link to="/app/StudyPage/">Study</Link></h5></li>
+                            <li><h5><Link to="/app/TestPage/">Test</Link></h5></li>
+                            <li><h5><a
                                 href="#logout"
                                 onClick={e => {
                                     logout()
@@ -46,7 +44,7 @@ const SidebarLayout = (props) => {
                                 }}
                             >
                                 Log Out
-                            </a></li>
+                            </a></h5></li>
                         </ul>
                     </div>
                 </div>
@@ -54,12 +52,12 @@ const SidebarLayout = (props) => {
             {props.type === 'Study' && 
                 <div className={SidebarLayout_STYLES.studySidebar}>
                     <div className={SidebarLayout_STYLES.sidebarContent}>
-                        <div>Active Set</div>
-                        <div>Progress</div>
+                        <h5>Active Set</h5>
+                        <h5>Progress</h5>
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/app/HomePage/">Exit to Home</Link></li>
+                            <li><h5><Link to="/app/">Exit to Home</Link></h5></li>
                         </ul>
                     </div>
                 </div>
@@ -67,13 +65,13 @@ const SidebarLayout = (props) => {
             {props.type === 'Test' && 
                 <div className={SidebarLayout_STYLES.testSidebar}>
                     <div className={SidebarLayout_STYLES.sidebarContent}>
-                        <div>Active Set</div>
-                        <div>Progress</div>
-                        <div>Time</div>
+                        <h5>Active Set</h5>
+                        <h5>Progress</h5>
+                        <h5>Time</h5>
                     </div>
                     <div className={SidebarLayout_STYLES.menu}>
                         <ul>
-                            <li><Link to="/app/HomePage/">Exit to Home</Link></li>
+                            <li><h5><Link to="/app/HomePage/">Exit to Home</Link></h5></li>
                         </ul>
                     </div>
                 </div>

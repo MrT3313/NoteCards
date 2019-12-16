@@ -1,6 +1,6 @@
 @import 'global';
 
-.index {
+.index, .indexHover {
     position: relative;
 
     display: flex;
@@ -15,6 +15,10 @@
     margin-top: $vertical_margin / 2;
 
     /* border: 1px dashed blue; */
+}
+
+.indexHover {
+    
 }
 
 .box_1, .box_2, .box_3 {
