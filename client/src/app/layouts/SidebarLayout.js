@@ -8,7 +8,8 @@ import { logout } from '../../utils/auth.js'
 // COMPONENTS
 
 // SCSS
-import SidebarLayout_STYLES from './SidebarLayout.module.scss'
+// import SidebarLayout_STYLES from './SidebarLayout.module.scss'
+import SidebarLayout_STYLES from '../../styles/SidebarLayout.module.scss'
 
 // MAIN COMPONENT TO EXPORT
 const SidebarLayout = (props) => {

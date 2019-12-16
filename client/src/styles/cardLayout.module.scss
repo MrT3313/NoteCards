@@ -1,0 +1,12 @@
+// @import '../../styles/global';
+@import 'global';
+
+.index {
+    display: flex;
+
+    height: 100%;
+    flex-grow: 1; 
+
+    border-radius: $base_radius;
+    border: 1px solid grey;
+}
