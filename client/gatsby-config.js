@@ -46,18 +46,20 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: [
+          "client/src/styles"
+
           // - 3.1 - Layouts
-          "client/src/app/layouts/cardLayout.module.scss",
-          "client/src/app/layouts/mainLayout.module.scss",
-          "client/src/app/layouts/sidebarLayout.module.scss",
+          // "client/src/styles/cardLayout.module.scss",
+          // "client/src/styles/mainLayout.module.scss",
+          // "client/src/styles/sidebarLayout.module.scss",
           // // - 3.1 - Styles
-          "client/src/styles/_global.scss",
-          "client/src/styles/cards.module.scss",
-          "client/src/styles/homePage.module.scss",
-          "client/src/styles/landingPage.module.scss",
-          "client/src/styles/studyPage.module.scss",
-          "client/src/styles/studySetOption.module.scss",
-          "client/src/styles/tab.module.scss,"
+          // "client/src/styles/_global.scss",
+          // "client/src/styles/cards.module.scss",
+          // "client/src/styles/homePage.module.scss",
+          // "client/src/styles/landingPage.module.scss",
+          // "client/src/styles/studyPage.module.scss",
+          // "client/src/styles/studySetOption.module.scss",
+          // "client/src/styles/tab.module.scss,"
         ],
       },
     },
@@ -74,26 +76,5 @@ module.exports = {
         },
       },
     }
-
-
-    // Images
-    // `gatsby-plugin-sharp`,
-    // `gatsby-transformer-sharp`,
-
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
