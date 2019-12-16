@@ -20,6 +20,7 @@ const StudyPage = (props) => {
     console.log('set', set)
     console.log('allData', allData)
 
+    const [index, setIndex] = useState(0)
     const [filtered, setFiltered] = useState([])
     // const category = props.location.state.props.item
 
@@ -46,12 +47,38 @@ const StudyPage = (props) => {
 
     console.log('STUDY PAGE FILTERED ARRAY',filtered)
 
-    // - B - // Return
+    // - B - // METHODS
+    const incrementor = (type) => {
+        type === 'add' ? (
+            index + 1 < filtered.length ? (
+                setIndex(index + 1)
+            ) : (
+                setIndex(0)
+            )
+        ) : (
+            index - 1 >= 0 ? (
+                setIndex(index - 1)
+            ) : (
+                setIndex(filtered.length - 1)
+            )
+        )
+    }
+
+    // - C - // Return
     return(
         <MainLayout>
             {/* <StudySidebar /> */}
             <Sidebar type="Study"/>
             <div className={StudyPage_STYLES.index}>
+                <div className={StudyPage_STYLES.incrementor}>
+                    <div
+                        onClick={incrementor}
+                    >Left</div>
+                    <div>{index}</div>
+                    <div
+                        onClick={() => incrementor('add')}
+                    >Right</div>
+                </div>
                 {filtered.map( (item, key) => <CARD_INDEX item={item} uniqueSets={uniqueSets}/> )}
             </div>
         </MainLayout>
