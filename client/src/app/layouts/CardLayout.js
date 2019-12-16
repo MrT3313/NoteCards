@@ -5,7 +5,7 @@ import React from 'react'
 
 // SCSS
 // import CardLayout_STYLES from './CardLayout.module.scss'
-import CardLayout_STYLES from '../../styles/CardLayout.module.scss'
+import CardLayout_STYLES from '../../styles/cardLayout.module.scss'
 
 // MAIN COMPONENT TO EXPORT
 const CardLayout = (props) => {
