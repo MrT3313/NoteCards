@@ -3,7 +3,7 @@
 .index {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center;
 
     flex-grow: 1;
@@ -13,5 +13,9 @@
 
 .incrementor {
     display: flex;
+    justify-content: space-around; 
+
+    width: 25%;
+
     
 }

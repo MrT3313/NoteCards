@@ -8,7 +8,7 @@ import MainLayout from '../layouts/MainLayout.js'
 import Sidebar from '../layouts/SidebarLayout.js'
 import CARD_INDEX from '../components/card/index.js'
 
-// CSSS
+// SCSS
 import StudyPage_STYLES from '../../styles/studyPage.module.scss'
 
 // MAIN COMPONENT TO EXPORT
@@ -79,7 +79,11 @@ const StudyPage = (props) => {
                         onClick={() => incrementor('add')}
                     >Right</div>
                 </div>
-                {filtered.map( (item, key) => <CARD_INDEX item={item} uniqueSets={uniqueSets}/> )}
+
+                {filtered.length !== 0 &&
+                    // filtered.map( (item, key) => <CARD_INDEX item={item} uniqueSets={uniqueSets}/> )
+                    <CARD_INDEX item={filtered[index]} uniqueSets={uniqueSets}/>
+                }
             </div>
         </MainLayout>
     )

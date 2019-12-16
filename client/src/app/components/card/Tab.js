@@ -11,7 +11,7 @@ import Tab_STYLES from '../../../styles/tab.module.scss'
 // MAIN COMPONENT TO EXPORT
 const Tab = (props) => {
     // - A - // Data & Variables
-    console.log('TAB PROPS: ', props)
+    // console.log('TAB PROPS: ', props)
     const { tabTitle } = props
     
     // - B - // Return
