@@ -17,10 +17,7 @@ const BACK_card = (props) => {
 
     // - B - // Return
     return (
-        <div
-            className={card_BACK_STYLES}
-        >
-            Back
+        <div className={card_BACK_STYLES}>
             <div>
                 {documentToReactComponents(item.node.mainDescription.json)}
             </div>

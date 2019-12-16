@@ -4,6 +4,9 @@ import React, {useState, useEffect} from 'react'
 // LAYOUTS
 import MainLayout from '../layouts/MainLayout.js'
 
+// SVGs
+import Arrow from '../../assets/arrow.svg'
+
 // COMPONENTS
 import Sidebar from '../layouts/SidebarLayout.js'
 import CARD_INDEX from '../components/card/index.js'
@@ -73,11 +76,20 @@ const StudyPage = (props) => {
                 <div className={StudyPage_STYLES.incrementor}>
                     <div
                         onClick={incrementor}
-                    >Left</div>
+                    >
+                        <Arrow 
+                            width="2rem" height="2rem"
+                            transform="rotate(180, 0, 0)"
+                        />
+                    </div>
+
                     <div>{index + 1} / {filtered.length}</div>
+
                     <div
                         onClick={() => incrementor('add')}
-                    >Right</div>
+                    >
+                        <Arrow width="2rem" height="2rem"/>
+                    </div>
                 </div>
 
                 {filtered.length !== 0 &&
