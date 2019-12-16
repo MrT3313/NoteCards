@@ -51,8 +51,8 @@ const setSession = (cb = () => {}) => (err, authResult) => {
     tokens.expiresAt = expiresAt
     user = authResult.idTokenPayload
     localStorage.setItem("isLoggedIn", true)
-    // navigate("/app")
-    navigate("/app/HomePage")
+    navigate("/app")
+    // navigate("/app/HomePage")
     cb()
   }
 }
