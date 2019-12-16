@@ -31,13 +31,13 @@ const LandingPage = (props) => {
             <div className={LandingPage_STYLES.userAction}>
 
                 {/* // - B.3.a - // Location Selection */}
-                <select className={LandingPage_STYLES.select}>
+                {/* <select className={LandingPage_STYLES.select}>
                     <option value="default">Please Select Location</option>
                     <option value="option_1">Salt Grass(1)</option>
                     <option value="option_2">Salt Grass(2)</option>
                     <option value="option_3">Italian Resturant</option>
                     <option value="option_4">Other Resturant</option>
-                </select>
+                </select> */}
                 {/* // - B.3.b - // Go To App */}
                 <Link to="/app">Log In / Sign Up</Link>
                 

@@ -74,14 +74,13 @@ const StudyPage = (props) => {
                     <div
                         onClick={incrementor}
                     >Left</div>
-                    <div>{index}</div>
+                    <div>{index + 1} / {filtered.length}</div>
                     <div
                         onClick={() => incrementor('add')}
                     >Right</div>
                 </div>
 
                 {filtered.length !== 0 &&
-                    // filtered.map( (item, key) => <CARD_INDEX item={item} uniqueSets={uniqueSets}/> )
                     <CARD_INDEX item={filtered[index]} uniqueSets={uniqueSets}/>
                 }
             </div>

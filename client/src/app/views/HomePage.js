@@ -46,6 +46,9 @@ const query = graphql`
             edges {
                 node {  
                     title
+                    mainDescription {
+                        json
+                    }
                     tabTitle
                     studySets
                     locationIDs
