@@ -1,6 +1,6 @@
 // IMPORTS
 import React from 'react'
-import { documentToReactComponents } from '@Contentful/rich-text-react-renderer'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 // LAYOUTS
 
