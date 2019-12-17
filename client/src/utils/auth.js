@@ -13,6 +13,8 @@ const auth = isBrowser
     })
   : {}
 
+console.log('!! AUTH OBJECT',auth)
+
 const tokens = {
   accessToken: false,
   idToken: false,
@@ -22,18 +24,30 @@ const tokens = {
 let user = {}
 
 export const isAuthenticated = () => {
+  // -1- // if typeof window === undefined
   if (!isBrowser) {
     return
+    
   }
+  // ELSE:
+    // V1 
+    // return localStorage.getItem("isLoggedIn") === "true"
+    
+    // V2
+    let checkResult_toDelete = true
+    console.log('CHECK -- isAuthenticated', checkResult_toDelete)
 
-  return localStorage.getItem("isLoggedIn") === "true"
+    // TODO: getItem ?? or setItem
+    return localStorage.getItem("isLoggedIn") === "true"
 }
 
 export const login = () => {
+  // -1- // if typeof window === undefined
   if (!isBrowser) {
     return
   }
 
+  // -2- // ELSE:
   auth.authorize()
 }
 
