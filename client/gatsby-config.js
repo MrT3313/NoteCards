@@ -1,37 +1,24 @@
-// configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
-
-// -- //
-
+// DOTENV
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
 console.log(process.env)
 
+// EXPORTS
 module.exports = {
   
-  // METADATA
+  // - A - // METADATA
   siteMetadata: {
-    // title: `Gatsby Default Starter`,
     title: `NoteCards`,
     subTitle: `The Proving Ground`,
     description: `Description`,
     author: `Reed Turgeon`,
   },
 
-  // PLUGINS
+  // - B - // PLUGINS
   plugins: [
-    // - 1 - // ACCESS: Markdown Data Plugin
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
-    },
-    // - 1.1 - // TRANSFORM: Markdown File into usefull html
-    `gatsby-transformer-remark`,
 
-    // - 2 - // Contentful CMS Plugin
+    // - 1 - // Contentful CMS Plugin
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -42,7 +29,7 @@ module.exports = {
       },
     },
 
-    // - 3 - // SASS Plugin
+    // - 2 - // SASS Plugin
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -65,10 +52,10 @@ module.exports = {
       },
     },
 
-    // - 4 - // Protecting HTML requests
+    // - 3 - // Protecting HTML requests
     `gatsby-plugin-react-helmet`,
 
-    // - 5 - // Using SVGs
+    // - 4 - // Using SVGs
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
