@@ -5,7 +5,7 @@ import React from 'react'
 const StudyPage = () => {
 
     return (
-        <div>STUDY PAGE</div>
+        <div>DONT SHOW THIS CONTENT UNTIL AUTH PROVEN!</div>
     )
 }
 

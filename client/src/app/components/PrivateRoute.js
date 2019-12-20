@@ -1,7 +1,8 @@
+// IMPORTS
 import React, { useEffect } from 'react'
-import { Route } from 'react-router-dom'
 import { useAuth0 } from '../../utils/react-auth0-spa.js'
 
+// __MAIN__
 const PrivateRoute = ({component: Component, path, ...rest}) => {
     const {loading, isAuthenticated, loginWithRedirect} = useAuth0()
 
@@ -20,7 +21,7 @@ const PrivateRoute = ({component: Component, path, ...rest}) => {
 
     const render = props => isAuthenticated === true ? <Component {...props} /> : null;
 
-    return <Route path={path} render={render} {...rest} />
+    return <Component path={path} render={render} {...rest} />
 }
 
 export default PrivateRoute

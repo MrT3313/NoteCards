@@ -1,6 +1,5 @@
 // IMPORTS
 import React from "react"
-import { Link } from 'gatsby'
 
 // AUTH
 import { useAuth0 } from '../utils/react-auth0-spa.js'
@@ -15,13 +14,16 @@ const GATSBY_INDEX_landingPage = () => {
         <>
             <div>Hello world!</div>
 
-            {!isAuthenticated && (
+            {!isAuthenticated &&
                 <button
                     onClick={() => loginWithRedirect({})}
                 >Log In</button>
-            )}
-            {isAuthenticated && <button onClick={() => logout()}>Log Out</button>}
-
+            }
+            {isAuthenticated && 
+                <button 
+                    onClick={() => logout()}
+                >Log Out</button>
+            }
         </>
     )
 }

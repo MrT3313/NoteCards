@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Auth0Provider } from "./src/utils/react-auth0-spa.js";
 import config from "./src/utils/auth0_config.json";
-import history from "./src/utils/history.js";
 
 // A function that routes the user to the right place after login
 // Docs -- https://thinkster.io/tutorials/auth0-react-login-and-user-profile/wrap-app-in-auth0provider
@@ -17,11 +16,6 @@ const onRedirectCallback = appState => {
             // : 'http://localhost:8000/app'
             // : window.location.href
     )
-    // history.push(
-    //     appState && appState.targetUrl
-    //         ? appState.targetUrl
-    //         : window.location.pathname
-    // );
 };
 
 export const wrapRootElement = ({ element }) => {

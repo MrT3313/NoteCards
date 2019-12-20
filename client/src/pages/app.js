@@ -1,7 +1,7 @@
 // IMPORTS
 import React from "react";
-// import {Router, Route} from '@reach/router'
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router } from '@reach/router'
+
 import history from "../utils/history.js";
 
 // AUTH
@@ -25,11 +25,14 @@ const App = () => {
     return (
         <div className="App">
             <Router history={history}>
-                <Switch>
+                {/* <Switch> */}
+                    {/* <HomePage exact path="/app" component={HomePage} />
+                    <StudyPage exact path="/app/StudyPage" component={StudyPage} />
+                    <TestPage exact path="/app/TestPage" component={TestPage} /> */}
                     <PrivateRoute exact path="/app" component={HomePage} />
                     <PrivateRoute exact path="/app/StudyPage" component={StudyPage} />
                     <PrivateRoute exact path="/app/TestPage" component={TestPage} />
-                </Switch>
+                {/* </Switch> */}
             </Router>
         </div>
     );
