@@ -46,7 +46,7 @@ const StudyPage = (props) => {
             })
         })
         setFiltered(filteredArray)
-    }, [allData])
+    }, [set.node.title, allData])
 
     console.log('STUDY PAGE FILTERED ARRAY',filtered)
 
@@ -72,10 +72,16 @@ const StudyPage = (props) => {
         <MainLayout>
             {/* <StudySidebar /> */}
             <Sidebar type="Study"/>
-            <div className={StudyPage_STYLES.index}>
-                <div className={StudyPage_STYLES.incrementor}>
+            <div 
+                className={StudyPage_STYLES.index}
+                onClick={incrementor}
+            >
+                <div 
+                    className={StudyPage_STYLES.incrementor}
+                    // onClick={incrementor}
+                >
                     <div
-                        onClick={incrementor}
+                        // onClick={incrementor}
                     >
                         <Arrow 
                             width="2rem" height="2rem"

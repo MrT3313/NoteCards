@@ -1,53 +1,61 @@
-// configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
-
-// -- //
-
+// DOTENV
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
+console.log(process.env)
 
+// EXPORTS
 module.exports = {
   
-  // METADATA
+  // - A - // METADATA
   siteMetadata: {
-    // title: `Gatsby Default Starter`,
     title: `NoteCards`,
     subTitle: `The Proving Ground`,
     description: `Description`,
     author: `Reed Turgeon`,
   },
 
-  // PLUGINS
+  // - B - // PLUGINS
   plugins: [
-    // - 1 - // ACCESS: Markdown Data Plugin
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
-    },
-    // - 1.1 - // TRANSFORM: Markdown File into usefull html
-    `gatsby-transformer-remark`,
 
-    // - 2 - // Contentful CMS Plugin
+    // - 1 - // Contentful CMS Plugin
     {
       resolve: `gatsby-source-contentful`,
       options: {
         // Learn about environment variables: https://gatsby.dev/env-vars
 
-        spaceId: process.env.CONTENTFUL_spaceID,
-        accessToken: process.env.CONTENTFUL_accessToken,
+        spaceId: process.env.GATSBY_CONTENTFUL_spaceID,
+        accessToken: process.env.GATSBY_CONTENTFUL_accessToken,
       },
     },
 
-    // - 3 - // SASS Plugin
-    `gatsby-plugin-sass`,
+    // - 2 - // SASS Plugin
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: [
+          "client/src/styles"
 
-    // - 4 - // Protecting HTML requests
+          // - 3.1 - Layouts
+          // "client/src/styles/cardLayout.module.scss",
+          // "client/src/styles/mainLayout.module.scss",
+          // "client/src/styles/sidebarLayout.module.scss",
+          // // - 3.1 - Styles
+          // "client/src/styles/_global.scss",
+          // "client/src/styles/cards.module.scss",
+          // "client/src/styles/homePage.module.scss",
+          // "client/src/styles/landingPage.module.scss",
+          // "client/src/styles/studyPage.module.scss",
+          // "client/src/styles/studySetOption.module.scss",
+          // "client/src/styles/tab.module.scss,"
+        ],
+      },
+    },
+
+    // - 3 - // Protecting HTML requests
     `gatsby-plugin-react-helmet`,
 
-    // - 5 - // Using SVGs
+    // - 4 - // Using SVGs
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -56,26 +64,5 @@ module.exports = {
         },
       },
     }
-
-
-    // Images
-    // `gatsby-plugin-sharp`,
-    // `gatsby-transformer-sharp`,
-
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

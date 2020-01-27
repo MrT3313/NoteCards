@@ -1,3 +1,5 @@
+// INITIAL COMMIT - HOSTING
+
 // IMPORTS
 import React from "react"
 import { useStaticQuery } from 'gatsby'
