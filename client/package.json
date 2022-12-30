@@ -15,7 +15,7 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@reach/router": "^1.2.1",
     "auth0-js": "^9.10.1",
-    "gatsby": "^2.3.16",
+    "gatsby": "^2.32.13",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.1.24",
